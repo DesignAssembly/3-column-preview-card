@@ -1,0 +1,132 @@
+@import url('https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@700&family=Lexend+Deca&display=swap');
+
+:root {
+    --prim-font: 'Lexend Deca';
+    --headline-font: 'Big Shoulders Display';
+    --transparent-white: hsla(0, 0%, 100%, 0.75);
+    --orange: hsl(31, 77%, 52%);
+    --cyan: hsl(184, 100%, 22%);
+    --dark-cyan: hsl(179, 100%, 13%);
+    --very-light-gray: hsl(0, 0%, 95%);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+   
+}
+
+html, body {
+    height: 100%;
+}
+
+body {
+    font-size: 15px;
+    font-family: var(--prim-font);
+    background: var(--very-light-gray);
+    color: var(--transparent-white);
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+p {
+    line-height: 24px;
+    margin-bottom: 24px;
+}
+
+.outer {
+    height: 100%;
+    width: 100%;
+
+    @media screen and(min-width:678px) {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+}
+
+.wrapper {
+    max-width: 920px;
+    border-radius: .5rem;
+    overflow: hidden;
+    margin: 88px 24px;
+
+    @media screen and(min-width:678px) {
+        display: flex;
+        flex-direction: row;
+        margin: 0 auto;
+    }
+}
+
+.container {
+
+    padding: 3rem;
+    display: flex;
+    flex-direction: column;
+
+    @media screen and (min-width:768px) {
+        height: 500px;  
+    }
+
+    img {
+        max-width: 66px;
+    }
+
+    &--orange {
+        background: var(--orange) ;
+
+        .btn {
+            color:var(--orange) ;
+        }
+    }
+    &--cyan {
+        background: var(--cyan);
+        .btn {
+            color:var(--cyan) ;
+        }
+    }
+    &--dark-cyan {
+        background: var(--dark-cyan);
+        .btn {
+            color:var(--dark-cyan) ;
+        }
+    }
+}
+
+h3 {
+    font-family: var(--headline-font);
+    font-size: 2.5rem;
+    color: var(--very-light-gray);
+    text-transform: uppercase;
+    margin-bottom: 2rem;
+    margin-top: 40px;
+}
+
+.btn {
+    border: 1px solid var(--very-light-gray);
+    background: var(--very-light-gray);
+    font-size: .95rem;
+    font-family: var(--prim-font);
+    padding: 1rem 2rem;
+    border-radius: 2rem;
+    top:auto;
+    margin-top: auto;
+    align-self: flex-start;
+    transition: all .3s ease-in-out;
+
+    &:hover {
+        background: transparent;
+        color:  var(--very-light-gray);
+    }
+}
+
+.attribution {
+    position: absolute;
+    bottom: 1rem;
+    width: 100%;
+    text-align: center;
+    color: var(--dark-cyan);
+    font-size: .75rem;
+}
